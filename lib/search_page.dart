@@ -5,7 +5,6 @@ import 'create_page.dart';
 class SearchPage extends StatefulWidget {
 
   final User user;
-
   const SearchPage(this.user, {Key? key}) : super(key: key);
 
   @override
@@ -20,7 +19,7 @@ class _SearchPageState extends State<SearchPage> {
       body: _buildBody(),
       floatingActionButton: FloatingActionButton(onPressed: (){
         Navigator.push(context,
-          MaterialPageRoute(builder: (context) => CreatePage()));
+          MaterialPageRoute(builder: (context) => CreatePage(widget.user)));
       },
       child: Icon(Icons.create),
         backgroundColor: Colors.blue,
