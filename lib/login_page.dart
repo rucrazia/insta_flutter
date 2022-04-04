@@ -37,8 +37,8 @@ class LoginPage extends StatelessWidget {
     final GoogleSignInAuthentication googleAuth = (await googleUser?.authentication)!;
 
     final OAuthCredential credential = GoogleAuthProvider.credential(
-      accessToken: googleAuth?.accessToken,
-      idToken: googleAuth?.idToken,
+      accessToken: googleAuth.accessToken,
+      idToken: googleAuth.idToken,
     );
 
     return await FirebaseAuth.instance.signInWithCredential(credential);
